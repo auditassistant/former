@@ -1,0 +1,59 @@
+{
+  "name": "former",
+  "version": "0.0.0",
+  "description": "Populate html form elements with data and update object to match changes",
+  "main": "index.js",
+  "scripts": {
+    "test": "tap test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mmckegg/former"
+  },
+  "keywords": [
+    "form",
+    "json",
+    "getValue",
+    "setValue",
+    "input",
+    "serialize"
+  ],
+  "testling": {
+    "files": "test/*.js",
+    "browsers": [
+      "iexplore/6.0..latest",
+      "chrome/13.0",
+      "chrome/20.0",
+      "chrome/25..latest",
+      "firefox/3.0",
+      "firefox/3.6",
+      "firefox/5.0",
+      "firefox/20.0",
+      "firefox/latest",
+      "opera/10.0",
+      "opera/10.5",
+      "opera/11.0",
+      "opera/12.0",
+      "opera/latest",
+      "safari/4.0",
+      "safari/5.0.5",
+      "safari/5.1",
+      "safari/latest",
+      "firefox/nightly",
+      "opera/next",
+      "chrome/canary",
+      "iphone/6.0..latest",
+      "ipad/6.0..latest",
+      "safari/6.0..latest",
+      "android-browser/4.2..latest"
+    ]
+  },
+  "devDependencies": {
+    "tape": "*"
+  },
+  "author": "Matt McKegg",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mmckegg/former/issues"
+  }
+}
