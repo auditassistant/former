@@ -28,7 +28,7 @@ module.exports = function(element, object, cb){
       var value = getObjectValue(object, key)
       setElementValue(e, value)
       dataNodes.push(e)
-    } else if (isTrigger(e)){
+    } else if (isTrigger(e) && cb){
       handleClick(e, trigger)
     }
   })
