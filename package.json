@@ -1,6 +1,6 @@
 {
   "name": "former",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Populate html form elements with data and return updated object",
   "main": "index.js",
   "scripts": {
