@@ -67,7 +67,7 @@ function isTrigger(node){
 
 function getElementValue(node){
   if (node.getValue){
-    return node.getValue
+    return node.getValue()
   } else if (node.nodeName == 'INPUT' && node.type == 'checkbox'){
     return node.checked
   } else if (node.nodeName == 'INPUT' && node.type == 'radio'){
