@@ -123,7 +123,7 @@ function obtain(object){
 
 function safeStringify(object){
   return JSON.stringify(object, function(k,v){
-    if (typeof key != 'string' || key.charAt(0) != '$'){ return v }
+    if (typeof k != 'string' || k.charAt(0) != '$'){ return v }
   })
 }
 
