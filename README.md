@@ -7,11 +7,8 @@ Populate html form elements with data and return updated object when action butt
 
 Great for use in conjunction with [JSON Context](https://github.com/mmckegg/json-context). 
 
-## Install
+[![NPM](https://nodei.co/npm/former.png?compact=true)](https://nodei.co/npm/former/)
 
-```bash
-$ npm install former
-```
 
 ## Example
 
