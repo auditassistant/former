@@ -23,7 +23,14 @@ test('basic operation', function(t){
 
   var select = document.createElement('select')
   select.setAttribute('name', 'select')
-  select.innerHTML = '<option value="1">Choice 1</option><option value="2">Choice 2</option>'
+  var option1 = document.createElement('option')
+  var option2 = document.createElement('option')
+  option1.appendChild(document.createTextNode('Choice 1'))
+  option1.value = '1'
+  option2.appendChild(document.createTextNode('Choice 2'))
+  option2.value = '2'
+  select.appendChild(option1)
+  select.appendChild(option2)
   element.appendChild(select)
 
 
