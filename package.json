@@ -1,6 +1,6 @@
 {
   "name": "former",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Populate html form elements with data and return updated object",
   "main": "index.js",
   "scripts": {
@@ -20,7 +20,6 @@
     "editor",
     "update"
   ],
-
   "testling": {
     "files": "test/*.js",
     "browsers": [
@@ -42,7 +41,6 @@
       "android-browser/4.2..latest"
     ]
   },
-
   "devDependencies": {
     "tape": "*"
   },
