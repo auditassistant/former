@@ -45,8 +45,8 @@ function handleClick(element, cb){
       e.stopPropagation()
       cb(element.getAttribute('data-action'))
     }, false)
-  } else if (obj.attachEvent) {
-    return obj.attachEvent('onclick', function(){
+  } else if (element.attachEvent) {
+    return element.attachEvent('onclick', function(){
       event.returnValue = false;
       cb(element.getAttribute('data-action'))
     })
