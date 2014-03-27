@@ -85,6 +85,8 @@ function setElementValue(node, value){
     node.checked = value
   } else if (node.nodeName == 'INPUT' && node.type == 'radio'){
     node.checked = node.value == value
+  } else if (node.nodeName == 'INPUT' && node.type == 'hidden') {
+    // pass thru
   } else {
     node.value = value || ''
   }
