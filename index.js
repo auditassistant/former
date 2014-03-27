@@ -73,8 +73,24 @@ function getElementValue(node){
     if (node.checked){
       return node.value
     }
+  } else if (node.nodeName == 'INPUT' && node.type == 'file'){
+    return getFile(node)
   } else {
     return node.value
+  }
+}
+
+function getFile(node){
+  if (node.files){
+    if (node.multiple){
+      var result = []
+      for (var i=0;i<node.files.length;i++){
+        result[i] = node.files[i]
+      }
+      return result
+    } else if (node.files.length === 1){
+      return node.files[0]
+    }
   }
 }
 
@@ -85,7 +101,7 @@ function setElementValue(node, value){
     node.checked = value
   } else if (node.nodeName == 'INPUT' && node.type == 'radio'){
     node.checked = node.value == value
-  } else if (node.nodeName == 'INPUT' && node.type == 'hidden') {
+  } else if (node.nodeName == 'INPUT' && (node.type == 'hidden' || node.type == 'file')) {
     // pass thru
   } else {
     node.value = value || ''
