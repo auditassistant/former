@@ -11,8 +11,7 @@ module.exports = function(element, object, cb){
   function trigger(action){
     var result = obtain(object || {})
     dataNodes.forEach(function(e){
-
-      if (isEnabled(e)){
+      if (!isHidden(e) && isEnabled(e)){
         var value = getElementValue(e)
         if (typeof value != 'undefined'){
           setObjectValue(result, e.getAttribute('name'), value)
@@ -143,6 +142,16 @@ function walkDom(rootNode, iterator){
         }
       }
       currentNode = currentNode && currentNode.nextSibling
+    }
+  }
+}
+
+function isHidden(element){
+  while (element){
+    if (element.hidden){
+      return true
+    } else {
+      element = element.parentNode
     }
   }
 }
