@@ -10,11 +10,20 @@ module.exports = function(element, object, cb){
 
   function trigger(action){
     var result = obtain(object || {})
+
+    var usedProperties = {}
     dataNodes.forEach(function(e){
+      var name = e.getAttribute('name')
       if (!isHidden(e) && isEnabled(e)){
         var value = getElementValue(e)
         if (typeof value != 'undefined'){
-          setObjectValue(result, e.getAttribute('name'), value)
+          setObjectValue(result, name, value)
+        }
+        usedProperties[name] = true
+      } else {
+        if (!usedProperties[name] && !isEnabled(e) && getObjectValue(result, name) != null){
+          // null out values when disabled
+          setObjectValue(result, name, null)
         }
       }
     })
