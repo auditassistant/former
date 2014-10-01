@@ -84,6 +84,8 @@ function getElementValue(node){
     }
   } else if (node.nodeName == 'INPUT' && node.type == 'file'){
     return getFile(node)
+  } else if (node.getAttribute('data-type') === 'boolean'){
+    return node.value == 'true'
   } else {
     return node.value
   }
