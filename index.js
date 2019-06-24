@@ -14,7 +14,7 @@ module.exports = function(element, object, cb){
     var usedProperties = {}
     dataNodes.forEach(function(e){
       var name = e.getAttribute('name')
-      if (!isHidden(e) && isEnabled(e)){
+      if (!isHidden(e) && (isEnabled(e) || e.nodeName === 'SELECT')) {
         var value = getElementValue(e)
         if (typeof value != 'undefined'){
           setObjectValue(result, name, value)
