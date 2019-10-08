@@ -175,6 +175,10 @@ function walkDom (rootNode, iterator) {
 }
 
 function isHidden (element) {
+  if (!element.offsetParent) {
+    return true
+  }
+
   while (element) {
     if (element.hidden) {
       return true
